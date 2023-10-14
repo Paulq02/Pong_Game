@@ -34,6 +34,8 @@ while game_on:
     time.sleep(0.1)
     screen.update()
     ball.move_ball()
+    #print(f"X cordinate: {ball.xcor()}... Y cordinate: {ball.ycor()}")
+    
 
 
 
@@ -42,18 +44,29 @@ while game_on:
     
     if ball.xcor() > 320:
         if ball.distance(r_paddle) < 50:
+            score.r_score()
             ball.bounce_x()
 
 
     if ball.xcor() < -320:
         if ball.distance(l_paddle) < 50:
+            score.l_score()
             ball.bounce_x()
 
-    if ball.xcor() > 380:
+    if ball.xcor() > 395:
         ball.reset_position()
 
-    if ball.xcor() < -380:
+    if ball.xcor() < -395:
         ball.reset_position()
+
+    if score.l_points == 5 and score.r_points < score.l_points and ball.xcor() > 385:
+        game_on = False
+        score.l_wins()
+    if score.r_points == 5 and score.l_points < score.r_points and ball.xcor() < -385:
+        game_on = False
+        score.r_wins()
+
+
         
         
 
