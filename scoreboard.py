@@ -8,6 +8,7 @@ class ScoreBoard(Turtle):
         self.r_points = 0
         self.r_starting_score()
         self.l_starting_score()
+        
 
 
     def r_wins(self):
@@ -52,6 +53,14 @@ class ScoreBoard(Turtle):
         self.color("white")
         self.goto(350, 260)
         self.write(f"Right player score:{self.r_points}", align="right",font=("Courier", 20, "normal") )
+
+
+    
+
+            
+
+        
+
         
         
 

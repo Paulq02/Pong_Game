@@ -16,6 +16,8 @@ class Paddle(Turtle):
         self.goto(position)
         
         
+        
+        
     def left_paddle_up(self):
         self.forward(20)
 
@@ -29,6 +31,13 @@ class Paddle(Turtle):
 
     def right_paddle_down(self):
         self.backward(20)
+
+
+    
+
+
+
+
 
 
 
